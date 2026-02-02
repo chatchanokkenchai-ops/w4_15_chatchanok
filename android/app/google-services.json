@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "380515099128",
+    "project_id": "w4-15-chatchanok",
+    "storage_bucket": "w4-15-chatchanok.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:380515099128:android:a951096dc040cf440a360d",
+        "android_client_info": {
+          "package_name": "com.example.w4_15_chatchanok"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMLgFEMOn5KSd-e6odO9Sa8-O7p2gX3Bc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
