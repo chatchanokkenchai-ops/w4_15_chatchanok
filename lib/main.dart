@@ -198,13 +198,77 @@ class SongDetail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Song Detail")),
-      body: Column(
-        children: [
-          Text(song["songName"]),
-          Text(song["artis"]),
-          Text(song["songType"]),
-        ],
+      appBar: AppBar(
+        title: Text("Song Detail"),
+        backgroundColor: Colors.redAccent, // Brighter red app bar
+      ),
+      body: Container(
+        color: Colors.red[50], // Light background color
+        padding: EdgeInsets.all(16.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            // Song Name
+            Card(
+              elevation: 4.0,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10.0),
+              ),
+              color: Colors.red[200], // Light red background for song name
+              child: Padding(
+                padding: EdgeInsets.all(16.0),
+                child: Text(
+                  song["songName"],
+                  style: TextStyle(
+                    fontSize: 28,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+            ),
+            SizedBox(height: 20), // Space between the text fields
+
+            // Artist Name
+            Row(
+              children: [
+                Icon(
+                  Icons.person,
+                  color: Colors.red[700], // Icon color matching the theme
+                ),
+                SizedBox(width: 10),
+                Text(
+                  song["artis"],
+                  style: TextStyle(
+                    fontSize: 20,
+                    color: Colors.red[700], // Darker red for artist name
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(height: 20),
+
+            // Song Type (Genre)
+            Row(
+              children: [
+                Icon(
+                  Icons.music_note,
+                  color: Colors.red[700], // Music note icon
+                ),
+                SizedBox(width: 10),
+                Text(
+                  song["songType"],
+                  style: TextStyle(
+                    fontSize: 18,
+                    color: Colors.red[600], // Lighter red for song type
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }
